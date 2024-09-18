@@ -30,6 +30,7 @@ namespace QueryFinanceYahoo
             dataTable = GetData(filename);
             bindingSource.DataSource = dataTable;
             dataGridView1.DataSource = bindingSource;
+            dataGridView1.Sort(dataGridView1.Columns[0], System.ComponentModel.ListSortDirection.Ascending);
 
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
 
@@ -56,7 +57,7 @@ namespace QueryFinanceYahoo
             if (ret)
             {
                 InitializeDataGridView();
-                MessageBox.Show("Atualização concluída com sucesso!", "Yahoo Finance Query", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"{dataTable.Rows.Count} itens atualizados com sucesso!", "Yahoo Finance Query", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             Cursor.Current = Cursors.Default;
@@ -69,6 +70,7 @@ namespace QueryFinanceYahoo
 
             InitializeDataGridView();
             cmdAtualizar.Enabled = true;
+            MessageBox.Show($"{dataTable.Rows.Count} itens carregados!", "Yahoo Finance Query", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             Cursor.Current = Cursors.Default;
         }
