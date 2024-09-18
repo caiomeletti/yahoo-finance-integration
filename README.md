@@ -1,11 +1,11 @@
 # yahoo-finance-integration
 
 
-![GitHub repo size](https://img.shields.io/github/repo-size/caiomeletti/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/caiomeletti/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/caiomeletti/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/caiomeletti/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/caiomeletti/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/caiomeletti/yahoo-finance-integration)
+![GitHub language count](https://img.shields.io/github/languages/count/caiomeletti/yahoo-finance-integration)
+![GitHub forks](https://img.shields.io/github/forks/caiomeletti/yahoo-finance-integration)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/caiomeletti/yahoo-finance-integration)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/caiomeletti/yahoo-finance-integration)
 
 ## Soluções
 Foram desenvolvidas duas versões para integração com a API do Yahoo Finance:
@@ -157,4 +157,4 @@ Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contr
 
 ## 📝 Licença
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE) para mais detalhes.
