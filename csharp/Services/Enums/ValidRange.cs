@@ -1,4 +1,4 @@
-﻿namespace Services.Services
+﻿namespace Services.Enums
 {
     public class ValidRange
     {

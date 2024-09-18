@@ -1,10 +1,8 @@
 ﻿using Consumer.Interfaces;
-using CsvHelper;
-using CsvHelper.Configuration;
 using Services.DTO;
+using Services.Enums;
 using Services.Interfaces;
 using Services.Utilities;
-using System.Globalization;
 
 namespace Services.Services
 {
