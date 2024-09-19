@@ -44,6 +44,8 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos de acordo
 - Excel versão 2016 (ou superior)
 - Habilitar `Microsoft Scripting Runtime`
     - No editor do Visual Basic, selecione o menu "Ferramentas; Referências" e marque a opção **Microsoft Scripting Runtime**
+- Habilitar `Microsoft WinHTTP Services`
+    - No editor do Visual Basic, selecione o menu "Ferramentas; Referências" e marque a opção **Microsoft WinHTTP Services**
 
 ![VBA Referências](images/vba-referencias.png)
 
