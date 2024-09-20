@@ -32,6 +32,7 @@
             cmdAtualizar = new Button();
             txtFilename = new TextBox();
             cmdCarregar = new Button();
+            cmdSelecionarArquivo = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             cmdAtualizar.Location = new Point(193, 572);
             cmdAtualizar.Name = "cmdAtualizar";
             cmdAtualizar.Size = new Size(175, 26);
-            cmdAtualizar.TabIndex = 5;
+            cmdAtualizar.TabIndex = 6;
             cmdAtualizar.Text = "&Atualizar";
             cmdAtualizar.UseVisualStyleBackColor = true;
             cmdAtualizar.Click += cmdAtualizar_Click;
@@ -59,7 +60,7 @@
             // 
             txtFilename.Location = new Point(12, 543);
             txtFilename.Name = "txtFilename";
-            txtFilename.Size = new Size(1057, 23);
+            txtFilename.Size = new Size(1022, 23);
             txtFilename.TabIndex = 3;
             // 
             // cmdCarregar
@@ -67,16 +68,27 @@
             cmdCarregar.Location = new Point(12, 572);
             cmdCarregar.Name = "cmdCarregar";
             cmdCarregar.Size = new Size(175, 26);
-            cmdCarregar.TabIndex = 4;
+            cmdCarregar.TabIndex = 5;
             cmdCarregar.Text = "&Carregar";
             cmdCarregar.UseVisualStyleBackColor = true;
             cmdCarregar.Click += cmdCarregar_Click;
+            // 
+            // cmdSelecionarArquivo
+            // 
+            cmdSelecionarArquivo.Location = new Point(1038, 542);
+            cmdSelecionarArquivo.Name = "cmdSelecionarArquivo";
+            cmdSelecionarArquivo.Size = new Size(41, 23);
+            cmdSelecionarArquivo.TabIndex = 4;
+            cmdSelecionarArquivo.Text = "...";
+            cmdSelecionarArquivo.UseVisualStyleBackColor = true;
+            cmdSelecionarArquivo.Click += cmdSelecionarArquivo_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1081, 606);
+            Controls.Add(cmdSelecionarArquivo);
             Controls.Add(cmdCarregar);
             Controls.Add(txtFilename);
             Controls.Add(cmdAtualizar);
@@ -94,5 +106,6 @@
         private Button cmdAtualizar;
         private TextBox txtFilename;
         private Button cmdCarregar;
+        private Button cmdSelecionarArquivo;
     }
 }

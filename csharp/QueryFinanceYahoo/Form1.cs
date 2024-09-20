@@ -80,5 +80,33 @@ namespace QueryFinanceYahoo
             cmdAtualizar.Enabled = enabled;
             cmdCarregar.Enabled = enabled;
         }
+
+        private void cmdSelecionarArquivo_Click(object sender, EventArgs e)
+        {
+            var filePath = OpenFileDialogToSelect();
+            txtFilename.Text = filename = !string.IsNullOrEmpty(filePath)
+                ? filePath
+                : txtFilename.Text;
+        }
+
+        private static string OpenFileDialogToSelect()
+        {
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new())
+            {
+                openFileDialog.InitialDirectory = Path.GetDirectoryName(Application.ExecutablePath);
+                openFileDialog.Filter = "csv files (*.csv)|*.csv|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = openFileDialog.FileName;
+                }
+            }
+
+            return filePath;
+        }
     }
 }
