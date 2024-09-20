@@ -49,9 +49,9 @@ namespace Services.Services
                 });
                 tasks.Add(t);
             }
-            Task.WaitAll(tasks.ToArray(), -1);
+            Task.WaitAll([.. tasks], -1);
 
-            return Util.CreateCsvFile(filename, records.Values.ToList());
+            return Util.CreateCsvFile(filename, [.. records.Values]);
         }
     }
 }
