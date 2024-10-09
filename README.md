@@ -1,6 +1,6 @@
 # yahoo-finance-integration
 
-
+![GitHub visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fcaiomeletti%2Fyahoo-finance-integration&countColor=%23263759&style=plastic)
 ![GitHub repo size](https://img.shields.io/github/repo-size/caiomeletti/yahoo-finance-integration)
 ![GitHub language count](https://img.shields.io/github/languages/count/caiomeletti/yahoo-finance-integration)
 ![GitHub forks](https://img.shields.io/github/forks/caiomeletti/yahoo-finance-integration)
