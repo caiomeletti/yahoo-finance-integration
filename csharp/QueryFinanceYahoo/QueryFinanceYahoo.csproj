@@ -16,10 +16,8 @@
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="query_finance_yahoo_v8.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="COPY $(ProjectDir)..\query_finance_yahoo_v8.csv $(ProjectDir)$(OutDir)" />
+  </Target>
 
 </Project>
