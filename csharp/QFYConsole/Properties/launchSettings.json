@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "QFYConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "query_finance_yahoo_v8.csv"
+    }
+  }
+}

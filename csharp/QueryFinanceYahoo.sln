@@ -5,11 +5,13 @@ VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryFinanceYahoo", "QueryFinanceYahoo\QueryFinanceYahoo.csproj", "{73493B53-C48F-4F92-AFC5-F562FCCC9039}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{E511640F-DD54-4D17-9414-E158BE7735C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{E511640F-DD54-4D17-9414-E158BE7735C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{BFBB0A80-0E12-4954-A364-6892A3A4D168}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "Consumer\Consumer.csproj", "{BFBB0A80-0E12-4954-A364-6892A3A4D168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{48206A4B-6DBD-49AA-BB11-91A087BC1896}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{48206A4B-6DBD-49AA-BB11-91A087BC1896}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QFYConsole", "QFYConsole\QFYConsole.csproj", "{100B7821-AA45-41CD-BDF0-B94D4FC62803}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{48206A4B-6DBD-49AA-BB11-91A087BC1896}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48206A4B-6DBD-49AA-BB11-91A087BC1896}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48206A4B-6DBD-49AA-BB11-91A087BC1896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{100B7821-AA45-41CD-BDF0-B94D4FC62803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{100B7821-AA45-41CD-BDF0-B94D4FC62803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{100B7821-AA45-41CD-BDF0-B94D4FC62803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{100B7821-AA45-41CD-BDF0-B94D4FC62803}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
