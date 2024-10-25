@@ -49,7 +49,19 @@ namespace Services.Services
                 });
                 tasks.Add(t);
             }
-            Task.WaitAll([.. tasks], -1);
+            try
+            {
+                Task.WaitAll([.. tasks], -1);
+            }
+            catch (AggregateException e)
+            {
+                for (int j = 0; j < e.InnerExceptions.Count; j++)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("-------------------------------------------------");
+                    Console.WriteLine(e.InnerExceptions[j].ToString());
+                }
+            }
 
             return Util.CreateCsvFile(filename, [.. records.Values]);
         }
