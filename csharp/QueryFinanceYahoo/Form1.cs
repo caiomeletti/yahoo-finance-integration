@@ -17,7 +17,7 @@ namespace QueryFinanceYahoo
         {
             InitializeComponent();
 
-            filename = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "query_finance_yahoo_v8.csv");
+            filename = Util.GetFullDefaultFilename() + "";
             txtFilename.Text = filename;
             //InitializeDataGridView();
             yahooFinanceService = new YahooFinanceService(new YahooFinanceIntegration());
@@ -27,7 +27,7 @@ namespace QueryFinanceYahoo
         {
             dataGridView1.AutoGenerateColumns = true;
 
-            dataTable = GetData(filename);
+            dataTable = Util.GetData(filename);
             bindingSource.DataSource = dataTable;
             dataGridView1.DataSource = bindingSource;
             dataGridView1.Sort(dataGridView1.Columns[0], System.ComponentModel.ListSortDirection.Ascending);
@@ -37,21 +37,12 @@ namespace QueryFinanceYahoo
             dataGridView1.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private static DataTable GetData(string _filename)
-        {
-            //var dt = Util.ConvertCSVtoDataTable(_filename);
-            var dt = Util.GetDataTableFromCsv(_filename);
-            return dt;
-        }
-
         private async void cmdAtualizar_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             EnabledButtons(false);
 
-            var tickers = (from DataRow row in dataTable.Rows
-                           select new string(row["Symbol"].ToString())
-                           ).ToList();
+            var tickers = Util.GetSymbols(dataTable.Rows);
 
             var ret = await yahooFinanceService.GetChartAndSave(tickers, filename);
             if (ret)

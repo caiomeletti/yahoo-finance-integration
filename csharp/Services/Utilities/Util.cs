@@ -54,6 +54,12 @@ namespace Services.Utilities
 
             return records;
         }
+        public static DataTable GetData(string _filename)
+        {
+            //var dt = Util.ConvertCSVtoDataTable(_filename);
+            var dt = GetDataTableFromCsv(_filename);
+            return dt;
+        }
 
         public static DataTable GetDataTableFromCsv(string filename)
         {
@@ -93,6 +99,23 @@ namespace Services.Utilities
             }
 
             return ret;
+        }
+
+        public static string? GetFullDefaultFilename()
+        {
+            return GetFullFilename("query_finance_yahoo_v8.csv");
+        }
+
+        public static string? GetFullFilename(string _filename)
+        {
+            return Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), _filename);
+        }
+
+        public static List<string> GetSymbols(DataRowCollection rows)
+        {
+            return (from DataRow row in rows
+                    select new string(row["Symbol"].ToString())
+                    ).ToList();
         }
     }
 }
